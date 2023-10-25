@@ -20,6 +20,7 @@ def client():
         yield app.test_client()  # tests run here
         db.drop_all()  # teardown
 
+
 def login(client, username, password):
     """Login helper function"""
     return client.post(
@@ -89,4 +90,4 @@ def test_delete_message(client):
 
 # def test_search(client):
 
-#def test_login_required(client):
+# def test_login_required(client):
